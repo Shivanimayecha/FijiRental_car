@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F9F9FC"
+    tools:context=".AddressActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1C1919">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/ic_back"
+            android:layout_margin="@dimen/_10sdp"/>
+
+        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_back"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="Transaction"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_20sdp">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_40sdp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_15sdp"
+                        android:background="#3E3B3B">
+
+                        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                            android:id="@+id/tv_we"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="WE OWE YOU"
+                            android:gravity="center_vertical"
+                            android:textColor="#D3D2D2"
+                            android:textSize="@dimen/_10sdp"/>
+
+
+                        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                            android:layout_below="@+id/tv_we"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$ 0.00"
+                            android:id="@+id/tv_rate"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10sdp"/>
+
+
+                        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                            android:id="@+id/tv_deposit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DIRECT DEPOSIT ACCOUNT"
+                            android:layout_alignParentRight="true"
+                            android:gravity="right"
+                            android:textColor="#D3D2D2"
+                            android:textSize="@dimen/_10sdp"/>
+
+
+                        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                            android:layout_below="@+id/tv_deposit"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_height="wrap_content"
+                            android:text="******2353"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10sdp"/>
+
+                        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:id="@+id/tv_nextpayment"
+                            android:layout_below="@+id/tv_rate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NEXT PAYMENT"
+                            android:gravity="center_vertical"
+                            android:textColor="#D3D2D2"
+                            android:textSize="@dimen/_10sdp"/>
+
+                        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                            android:layout_below="@+id/tv_nextpayment"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/tv_payment"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10sdp"/>
+
+
+
+                        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="EDIT ACCOUNT"
+                            android:layout_below="@+id/tv_nextpayment"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10sdp"/>
+
+                    </RelativeLayout>
+
+
+                    <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/iv_back"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:text="January 2020"
+                        android:textAllCaps="true"
+                        android:gravity="center_vertical"
+                        android:textColor="#3E3E3D"
+                        android:textSize="@dimen/_10sdp"/>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/recyclerviewtransaction"/>
+
+
+                </LinearLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</LinearLayout>
+

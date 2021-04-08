@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:paddingVertical="@dimen/_15sdp"
+    android:paddingHorizontal="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_5sdp"
+    >
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="@dimen/_2sdp"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:src="@drawable/profile_img"/>
+
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_toRightOf="@+id/profile_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/_5sdp">
+
+
+        <ImageView
+            android:id="@+id/iv_star1"
+            android:scaleType="fitXY"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/ic_action_rate_green"/>
+
+        <ImageView
+            android:layout_toRightOf="@+id/iv_star1"
+            android:id="@+id/iv_star2"
+            android:scaleType="fitXY"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/ic_action_rate_green"/>
+
+        <ImageView
+            android:layout_toRightOf="@+id/iv_star2"
+            android:id="@+id/iv_star3"
+            android:scaleType="fitXY"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/ic_action_rate_green"/>
+
+        <ImageView
+            android:layout_toRightOf="@+id/iv_star3"
+            android:id="@+id/iv_star4"
+            android:scaleType="fitXY"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/ic_action_rate_green"/>
+
+        <ImageView
+            android:layout_toRightOf="@+id/iv_star4"
+            android:id="@+id/iv_star5"
+            android:scaleType="fitXY"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/ic_action_rate_green"/>
+        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+            android:id="@+id/tv_name"
+            android:layout_below="@+id/iv_star1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black2"
+            android:letterSpacing="0.02"
+            android:text="Resla model 3 2018"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textSize="@dimen/_10sdp"/>
+
+
+        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+            android:layout_below="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black2"
+            android:letterSpacing="0.02"
+            android:text="Had an awesome time in jarden's Tesla. Good times good host"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textSize="@dimen/_10sdp"/>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
+

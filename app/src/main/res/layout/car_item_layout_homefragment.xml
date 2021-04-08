@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_10sdp"
+    android:orientation="vertical"
+    android:elevation=".3dp"
+    android:background="@drawable/round_white"
+    android:paddingBottom="@dimen/_10sdp">
+
+    <RelativeLayout
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_150sdp">
+
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:src="@drawable/car1"
+            android:scaleType="fitXY"
+            android:background="@drawable/roundimage"/>
+
+        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Regular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="12dp"
+            android:background="@color/white"
+            android:padding="@dimen/_5sdp"
+            android:visibility="gone"
+            android:text="US$ 22/day"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <ImageView
+            android:id="@+id/iv_favourite"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_favrorite_selected"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/round_white">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_rate"/>
+
+
+            <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.0"
+                android:id="@+id/tv_rating"
+                android:textColor="#000004"/>
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+            android:id="@+id/tv_car_model"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2019"
+            android:textColor="#9B9A9A"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+            android:id="@+id/tv_carname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BMW M4"
+            android:textColor="#F22F46"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textSize="@dimen/_13sdp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_person"/>
+
+        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Regular
+            android:id="@+id/tv_number_seat"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="4"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:textColor="#333333"
+            android:textSize="@dimen/_12sdp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_door"/>
+
+        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Regular
+            android:id="@+id/tv_number_door"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 Doors "
+            android:textColor="#333333"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:textSize="@dimen/_12sdp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_ac"/>
+
+        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Regular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Air conditioning"
+            android:textColor="#333333"
+            android:paddingLeft="@dimen/_3sdp"
+            android:textSize="@dimen/_12sdp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:lineSpacingMultiplier="0.8"
+            android:text="RESERVE NOW"
+            android:background="@drawable/rounded_blue"
+            android:paddingVertical="@dimen/_7sdp"
+            android:paddingHorizontal="@dimen/_20sdp"/>
+
+
+        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:textColor="@color/black"
+            android:lineSpacingMultiplier="0.8"
+            android:text="From $120 per day"
+            android:paddingVertical="@dimen/_10sdp"/>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

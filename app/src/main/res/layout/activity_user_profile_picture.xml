@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9FC"
+    android:orientation="vertical"
+    tools:context=".ProfilePictureActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1C1919">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:src="@drawable/ic_back" />
+
+        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_toRightOf="@+id/iv_back"
+            android:gravity="center_vertical"
+            android:letterSpacing="0.02"
+            android:text="Profile Picture"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:layout_toRightOf="@+id/iv_back"
+        android:gravity="center_vertical"
+        android:letterSpacing="0.02"
+        android:text="Adding a photo helps hosts and guests recognize each other when picking up the car"
+        android:textColor="@color/black4"
+        android:textSize="@dimen/_12sdp" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:src="@drawable/drive" />
+
+
+    <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/_15sdp"
+        android:layout_toRightOf="@+id/iv_back"
+        android:gravity="center_horizontal"
+        android:letterSpacing="0.02"
+        android:text="Add a photo"
+        android:textColor="@color/green"
+        android:textSize="@dimen/_12sdp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|end"
+        android:orientation="vertical">
+
+        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+            android:id="@+id/tv_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_phone"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@color/green"
+            android:gravity="center_horizontal"
+            android:letterSpacing="0.02"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="Next"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

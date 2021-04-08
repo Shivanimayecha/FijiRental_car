@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/selection_state"
+    android:clickable="true"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@color/black4" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_8sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Prepaid refuel"
+                    android:id="@+id/extraName"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="US$ 65/trip"
+                        android:id="@+id/extra_price"
+                        android:textColor="@color/black" />
+
+                    <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/_8sdp"
+                        android:text="Edit"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:textColor="@color/green" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/check_btn"
+                android:layout_width="wrap_content"
+                android:checked="true"
+                android:layout_height="wrap_content"
+                android:button="@drawable/checkbox_selection" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/black4" />
+
+    </LinearLayout>
+
+</RelativeLayout>

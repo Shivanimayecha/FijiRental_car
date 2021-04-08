@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".YourGoals">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/toolbar_color"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/_10sdp"
+                android:src="@drawable/ic_back"
+                />
+
+            <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_toRightOf="@+id/iv_back"
+                android:gravity="center"
+                android:text="@string/details"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp" />
+
+            <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Regular
+                android:id="@+id/save_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/_10sdp"
+
+                android:text="@string/save"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                app:textAllCaps="true" />
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/carNumber"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Car name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/car_name"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_11sdp"
+                        android:paddingVertical="@dimen/_10sdp"
+                      />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Extrabold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:text="@string/licence_plate"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="License plate number">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/car_licenceNumber"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textSize="@dimen/_11sdp"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="@dimen/_10sdp"
+                       />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Extrabold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:text="Basic car details"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:endIconMode="none"
+                    android:hint="Number of seats">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/car_seat"
+                        android:inputType="none"
+                        android:focusableInTouchMode="false"
+                        android:textSize="@dimen/_11sdp"
+                        android:paddingVertical="@dimen/_10sdp"
+                       />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    app:endIconMode="none"
+                    android:hint="Number of doors">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/car_door"
+                        android:inputType="none"
+                        android:focusableInTouchMode="false"
+                        android:textSize="@dimen/_11sdp"
+                        android:paddingVertical="@dimen/_10sdp"
+                       />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:hint="Maximum Luggage"
+                    app:endIconMode="none"
+                    app:boxStrokeWidth="@dimen/_1sdp"
+                    app:boxStrokeWidthFocused="@dimen/_1sdp">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/car_luggage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:focusableInTouchMode="false"
+                        android:textSize="@dimen/_11sdp"
+                        android:paddingVertical="@dimen/_10sdp"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:hint="Maximum Passenger"
+                    app:boxStrokeWidth="@dimen/_1sdp"
+                    app:endIconMode="none"
+                    app:boxStrokeWidthFocused="@dimen/_1sdp">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/car_passenger"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:focusableInTouchMode="false"
+                        android:textSize="@dimen/_11sdp"
+                        android:paddingVertical="@dimen/_10sdp"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:hint="Minimal driver age"
+                    app:endIconMode="none"
+                    app:boxStrokeWidth="@dimen/_1sdp"
+                    app:boxStrokeWidthFocused="@dimen/_1sdp">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/driver_min_age"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:textSize="@dimen/_11sdp"
+                        android:focusableInTouchMode="false"
+                        android:paddingVertical="@dimen/_10sdp"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="@color/quantum_black_hint_text"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    app:boxStrokeWidth="@dimen/_1sdp"
+                    app:boxStrokeWidthFocused="@dimen/_1sdp"
+                    android:hint="Deposit amount">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/car_bondvalue"
+                        android:inputType="numberDecimal"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_11sdp"
+                        android:paddingVertical="@dimen/_10sdp"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    app:endIconMode="none"
+                    android:hint="Fuel type">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/car_fuelType"
+                        android:inputType="none"
+                        android:focusableInTouchMode="false"
+                        android:textSize="@dimen/_11sdp"
+                        android:paddingVertical="@dimen/_10sdp"
+                       />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_8sdp"
+
+                    android:hint="Gas grade">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:textSize="@dimen/_11sdp"
+                        android:paddingVertical="@dimen/_10sdp"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    app:boxStrokeColor="@color/quantum_black_hint_text"
+                    app:boxStrokeWidth="@dimen/_1sdp"
+                    app:boxStrokeWidthFocused="@dimen/_1sdp"
+                    android:hint="City MPG">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/cityMpg"
+                        android:inputType="numberDecimal"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_11sdp"
+                        android:paddingVertical="@dimen/_10sdp"
+                       />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="@color/quantum_black_hint_text"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    app:boxStrokeWidth="@dimen/_1sdp"
+                    app:boxStrokeWidthFocused="@dimen/_1sdp"
+                    android:hint="Hwy MPG">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/hwyMpg"
+                        android:inputType="numberDecimal"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_11sdp"
+                        android:paddingVertical="@dimen/_10sdp"
+                       />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Extrabold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:text="@string/car_features"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/carList_feature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Regular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_10sdp"
+                    android:text="@string/featue_sub"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/black3" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_8sdp">
+                    <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Additional features"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14sdp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                    <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/green"
+                        android:text="add"
+                        android:padding="@dimen/_10sdp"
+                        app:textAllCaps="true"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="@dimen/_10sdp"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/black3" />
+
+                <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Extrabold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:text="@string/description"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp" />
+
+                <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Regular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:text="@string/tell_guest"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:background="@color/blue_grey_50"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:src="@drawable/adcance_notice"
+                        />
+
+                    <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Regular
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/_8sdp"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:text="This is dummy text"
+                        android:textColor="@color/black2"
+                        android:textSize="@dimen/_10sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edit_bg"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="vertical">
+
+                    <com.app.fijirentalcars.CustomViews.CustomEditText_Poppins_SemiBold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="8"
+                        android:layout_margin="@dimen/_1sdp"
+                        android:id="@+id/car_desc"
+                        android:textSize="@dimen/_11sdp"
+                        android:background="@drawable/squircle"
+                        android:padding="@dimen/_5sdp"
+                        android:gravity="start"
+                        android:hint="50 word minimum"
+                        />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/black3" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_8sdp">
+                    <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FAQs"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14sdp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                    <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/green"
+                        android:text="view"
+                        app:textAllCaps="true"
+                        android:padding="@dimen/_10sdp"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="@dimen/_10sdp"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/black3" />
+
+                <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Extrabold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:text="@string/guidelines"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp" />
+
+                <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Regular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:text="@string/guidelines_msg"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="vertical">
+
+                    <com.app.fijirentalcars.CustomViews.CustomEditText_Poppins_SemiBold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="8"
+                        android:layout_margin="@dimen/_1sdp"
+                        android:id="@+id/car_guideline"
+                        android:textSize="@dimen/_11sdp"
+                        android:background="@drawable/squircle"
+                        android:padding="@dimen/_5sdp"
+                        android:gravity="start"
+                        />
+                </LinearLayout>
+
+                <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Extrabold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:text="Car color"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/black3" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:id="@+id/carColorList"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

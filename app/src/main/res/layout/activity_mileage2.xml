@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F9F9FC"
+    tools:context=".MileageActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F9F9FC">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/ic_action_back_black"
+            android:layout_margin="@dimen/_10sdp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_back"
+                android:layout_margin="@dimen/_10sdp"
+                android:text="Help"
+                android:letterSpacing="0.02"
+                android:gravity="right"
+                android:layout_gravity="right"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_14sdp"/>
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_40sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_40sdp"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_height="@dimen/_200sdp"
+                    android:src="@drawable/check_mileage"
+                    android:layout_gravity="center_horizontal"/>
+
+
+                <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_toRightOf="@+id/iv_back"
+                    android:gravity="center_horizontal"
+                    android:text="Check mileage and fuel level"
+                    android:textColor="@color/black2"
+                    android:letterSpacing="0.02"
+                    android:textSize="@dimen/_14sdp" />
+
+                <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:text="Lorem ipsum dolor sit amet on the coctetur adipiscing elit the sed do eiusmod tempor Lorem ipsum dolor sit amet on the coctetur"
+                    android:gravity="center_horizontal"
+                    android:textSize="@dimen/_10sdp"
+                    android:letterSpacing="0.02"
+                    android:textColor="#555555"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_20sdp"/>
+
+
+                <com.app.fijirentalcars.CustomViews.CustomEditText_Poppins_SemiBold
+                    android:id="@+id/et_fname"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/black3"
+                    android:textColorHint="@color/black3"
+                    android:letterSpacing="0.02"
+                    android:hint="36596"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:background="@drawable/rounded_black_corner"/>
+
+                <com.app.fijirentalcars.CustomViews.CustomEditText_Poppins_SemiBold
+                    android:id="@+id/et_midlename"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:textSize="@dimen/_10sdp"
+                    android:letterSpacing="0.02"
+                    android:textColorHint="@color/black3"
+                    android:textColor="@color/black3"
+                    android:hint="Fuel is at 3/4"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:background="@drawable/rounded_black_corner"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+            android:id="@+id/tv_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14sdp"
+            android:layout_alignParentBottom="true"
+            android:paddingVertical="@dimen/_10sdp"
+            android:textColor="@color/white"
+            android:text="Next"
+            android:letterSpacing="0.02"
+            android:textAllCaps="true"
+            android:background="@color/green"
+            android:gravity="center_horizontal"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="@dimen/_30sdp"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "322897093175",
+    "firebase_url": "https://fiji-car-rental.firebaseio.com",
+    "project_id": "fiji-car-rental",
+    "storage_bucket": "fiji-car-rental.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:322897093175:android:73671ffafb7ddd30b855b2",
+        "android_client_info": {
+          "package_name": "com.app.fijirentalcars"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "322897093175-nr8mdkufvc3pkf3jsvjgtnmrkrh1onbq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.fijirentalcars",
+            "certificate_hash": "5c642d61b834a7db70b4dea8ca0994b461b10fad"
+          }
+        },
+        {
+          "client_id": "322897093175-b3n8sidpu73869bpd0a2ddivu1e0pumv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLIXKTIK4V_42BKoZY5K_qbhYv5XHd7CI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "322897093175-b3n8sidpu73869bpd0a2ddivu1e0pumv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

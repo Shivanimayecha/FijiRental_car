@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".ProfileDetailActivity">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:fitsSystemWindows="true"
+                android:theme="@style/AppTheme.AppBarOverlay"
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleTextAppearance="@style/TextAppearance.ExpandedTitle"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:toolbarId="@+id/toolbar1">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+
+                    app:layout_collapseMode="parallax"
+
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_60sdp"
+                        android:background="@drawable/profile_bg_img" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:orientation="vertical">
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/profile_image"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_80sdp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/drive"
+                            app:civ_border_color="@color/white"
+                            app:civ_border_width="@dimen/_2sdp" />
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_back"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:src="@drawable/ic_back"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:navigationIcon="@drawable/ic_back"
+                    app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <include layout="@layout/content_scrolling" />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    <!--
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical">
+
+       &lt;!&ndash; <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/collapsing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+
+                    <ImageView
+                        android:id="@+id/imageview_placeholder"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerCrop"
+                        android:tint="#11000000"
+                        app:layout_collapseMode="parallax"
+                        app:layout_collapseParallaxMultiplier="0.9" />
+
+                    <FrameLayout
+                        android:id="@+id/framelayout_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        app:layout_collapseMode="parallax"
+                        app:layout_collapseParallaxMultiplier="0.3">
+
+
+
+                        <LinearLayout
+                            android:id="@+id/linearlayout_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <com.example.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="bottom|center"
+                                android:text="Jarden Tourcuato"
+                                android:textColor="@color/black2"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="4dp"
+                                android:text="Joined may 2018"
+                                android:textColor="@color/black2" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            app:behavior_overlapTop="30dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardElevation="8dp"
+                app:contentPadding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="8dp"
+                    android:text="@string/lorem"
+                    android:textSize="18sp" />
+            </androidx.cardview.widget.CardView>
+        </androidx.core.widget.NestedScrollView>
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar1"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:layout_anchor="@id/framelayout_title"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:title="aadbdb">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="@dimen/image_small_width"
+                    android:layout_height="@dimen/image_small_width" />
+
+                <TextView
+                    android:id="@+id/textview_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center_vertical"
+                    android:text="Grumpy Cat information"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+       &lt;!&ndash; <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/avatar"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_width"
+            android:layout_gravity="center"
+            app:layout_behavior="info.devexchanges.customcoordiantorbehavior.ImageBehavior"
+            fresco:roundAsCircle="true" />&ndash;&gt;
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatar"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="@dimen/_2sdp"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/profile"/>&ndash;&gt;
+
+
+
+    </LinearLayout>-->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_action"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:visibility="visible"
+        app:layout_anchorGravity="bottom|end"
+        app:backgroundTint="@color/green"
+        app:tint="@color/white"
+        app:srcCompat="@drawable/ic_action_edit" />
+
+</RelativeLayout>

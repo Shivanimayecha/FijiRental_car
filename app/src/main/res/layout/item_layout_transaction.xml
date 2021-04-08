@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_5sdp"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_15sdp"
+        android:background="@color/white">
+
+        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+            android:id="@+id/tv_we"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adam"
+            android:letterSpacing="0.02"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"/>
+
+
+        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+            android:layout_below="@+id/tv_we"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="with Tesla Model 3 2019"
+            android:id="@+id/tv_rate"
+            android:letterSpacing="0.02"
+            android:gravity="center_vertical"
+            android:textColor="#9A98B5"
+            android:textSize="@dimen/_10sdp"/>
+
+
+        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+            android:id="@+id/tv_deposit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$120"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:letterSpacing="0.02"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"/>
+
+
+        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+            android:layout_below="@+id/tv_deposit"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:text="Jan 25,2020"
+            android:letterSpacing="0.02"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:gravity="center_vertical"
+            android:textColor="#9A98B5"
+            android:textSize="@dimen/_10sdp"/>
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_action_next"/>
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

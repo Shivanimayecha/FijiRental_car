@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@id/iv_delivery"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/select_location"
+            android:src="@drawable/ic_action_location_black" />
+
+
+    </LinearLayout>
+
+
+    <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+        android:id="@+id/tv_deliverylocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_toRightOf="@+id/iv_delivery"
+        android:gravity="center_vertical"
+        android:text="Bob Hope Airport"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10sdp" />
+
+    <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_deliverylocation"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_toRightOf="@+id/iv_delivery"
+        android:gravity="center_vertical"
+        android:text="Airport"
+        android:textAllCaps="true"
+        android:textColor="@color/black3"
+        android:textSize="@dimen/_10sdp" />
+
+
+    <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="right|center_vertical"
+        android:text="$ 30"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:id="@+id/fair_price"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10sdp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sdp"
+        android:id="@+id/view_divider"
+        android:layout_below="@+id/iv_delivery"
+        android:layout_marginLeft="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="#EEEEEE" />
+
+</RelativeLayout>

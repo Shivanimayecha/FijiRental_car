@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginVertical="@dimen/_5sdp"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_20sdp"
+        android:paddingLeft="@dimen/_20sdp"
+        >
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/profile_img"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:layout_toRightOf="@+id/profile_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:orientation="vertical">
+
+
+            <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black2"
+                android:text="Trip pending"
+                android:letterSpacing="0.02"
+                android:textSize="@dimen/_12sdp"/>
+
+            <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black3"
+                android:letterSpacing="0.02"
+                android:text="Your trip with Carlo's FIAT 500 is pending.Carlos has until 9:00 PM on saturdau,June 10,2017 to respond"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_10sdp"/>
+
+            <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black3"
+                android:letterSpacing="0.02"
+                android:text="Sat,June 10,1:00 PM"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_12sdp"/>
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

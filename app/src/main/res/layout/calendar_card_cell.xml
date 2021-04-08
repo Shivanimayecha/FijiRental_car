@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<com.app.fijirentalcars.view.HRCalendarCell style="@style/CalendarCard.CellTextView"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:paddingTop="@dimen/_2sdp"
+    android:paddingLeft="@dimen/_2sdp"
+    android:fontFamily="@font/helveticaregular"
+    tools:text="12"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    </com.app.fijirentalcars.view.HRCalendarCell>

@@ -1,0 +1,5 @@
+include ':androidtoggleswitch-sample'
+include ':androidtoggleswitch'
+include ':mtb'
+rootProject.name='Fiji Rental Cars'
+include ':app'

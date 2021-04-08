@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/check_box"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:button="@drawable/checkbox_selection_check"/>
+
+    <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@id/check_box"
+        android:layout_centerVertical="true"
+        android:id="@+id/textName"/>
+
+
+</RelativeLayout>

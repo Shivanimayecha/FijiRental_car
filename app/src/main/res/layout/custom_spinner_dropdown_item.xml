@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    style="?android:attr/spinnerItemStyle"
+    android:singleLine="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/_4sdp"
+    android:paddingBottom="@dimen/_4sdp"
+    android:ellipsize="marquee"
+    android:textAlignment="inherit"/>

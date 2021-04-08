@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DamageActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:src="@drawable/ic_action_back_black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_toRightOf="@+id/iv_back"
+                android:gravity="right"
+                android:text="Help"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp" />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_180sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:src="@drawable/pre_existing_damage" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.5"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:layout_toRightOf="@+id/iv_back"
+                android:gravity="center_horizontal"
+                android:text="Any pre-exsiting damage?"
+                android:textAllCaps="false"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_14sdp" />
+
+            <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center"
+                android:padding="@dimen/_15sdp"
+                android:text="Lorem ipsum dolor sit amet on the coctetur adipiscing elit the sed do eiusmod tempor Lorem ipsum dolor sit amet on the coctetur"
+                android:textColor="@color/black3"
+                android:textSize="@dimen/_12sdp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+                android:id="@+id/tv_yes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_3sdp"
+                android:layout_weight="0.5"
+                android:background="@color/green"
+                android:gravity="center_horizontal"
+                android:letterSpacing="0.02"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="Yes"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp" />
+
+            <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+                android:id="@+id/tv_no"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:layout_weight="0.5"
+                android:background="@color/green"
+                android:gravity="center_horizontal"
+                android:letterSpacing="0.02"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="No"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp" />
+
+        </LinearLayout>
+
+        <!--<com.example.fijirentalcars.CustomViews.CustomTextView_Poppins_Extrabold
+            android:id="@+id/tv_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14sdp"
+
+            android:paddingVertical="@dimen/_10sdp"
+            android:textColor="@color/white"
+            android:text="Next"
+            android:textAllCaps="true"
+            android:background="@color/green"
+            android:gravity="center_horizontal"
+
+            android:layout_marginTop="@dimen/_30sdp"/>-->
+    </LinearLayout>
+
+
+</LinearLayout>

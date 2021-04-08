@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9FC">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_55sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+                    android:id="@+id/tv_discount1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:gravity="center_vertical"
+                    android:letterSpacing="0.02"
+                    android:text="All star host"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black3"
+                    android:textSize="@dimen/_12sdp" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/white"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/iv_star"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_margin="@dimen/_15sdp"
+                        android:src="@drawable/all_start" />
+
+
+                    <ImageView
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_action_info" />
+
+
+                    <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_toRightOf="@id/iv_star"
+                        android:letterSpacing="0.02"
+                        android:text="All Star Host Achived"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                        android:id="@+id/tv_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_title"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_20sdp"
+                        android:layout_toRightOf="@id/iv_star"
+                        android:letterSpacing="0.02"
+                        android:text="Congrats on earning All Star Host status last period Enjoy ther perks,and keep up the good work."
+                        android:textColor="@color/black3"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_star"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:gravity="center_horizontal">
+
+                        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                            android:id="@+id/tv_viewmore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/_15sdp"
+                            android:letterSpacing="0.02"
+                            android:text="VIEW MORE"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:src="@drawable/ic_action_dropdown" />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+                <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+                    android:id="@+id/tv_last"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:gravity="center_vertical"
+                    android:letterSpacing="0.02"
+                    android:text="Last 365 days"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black3"
+                    android:textSize="@dimen/_12sdp" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerviewperformance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp" />
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_recycle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/filter_round_bg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:paddingVertical="@dimen/_5sdp">
+
+        <ImageView
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:src="@drawable/ic_action_filter" />
+
+        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+            android:id="@+id/tv_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:letterSpacing="0.02"
+            android:text="Apr 1,2019 - Mar 31,2020"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp" />
+
+
+    </LinearLayout>
+</RelativeLayout>

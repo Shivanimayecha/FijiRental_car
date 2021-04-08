@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".YourGoals">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:src="@drawable/ic_back"
+            app:tint="@color/black" />
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tv_continue"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_10sdp">
+
+            <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/min_trip_duration"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20sdp"
+                android:paddingTop="@dimen/_10sdp"/>
+
+            <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Regular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/shortest_trip"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/blue_grey_50"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:src="@drawable/ic_action_ac"
+                    app:tint="@color/green"/>
+
+                <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Regular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:textSize="@dimen/_10sdp"
+                    android:text="This is dummy text"
+                    android:textColor="@color/black2"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_8sdp"
+                    />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/black3" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:id="@+id/min_trip_group"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_8sdp">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:layoutDirection="rtl"
+                    android:text="@string/day_1"
+                    android:tag="ONE_DAY"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"/>
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:layoutDirection="rtl"
+                    android:text="@string/day_2"
+                    android:tag="TWO_DAYS"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"/>
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:layoutDirection="rtl"
+                    android:text="@string/day_3"
+                    android:tag="THREE_DAYS"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"/>
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:layoutDirection="rtl"
+                    android:text="@string/day_5"
+                    android:tag="FIVE_DAYS"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+        android:id="@+id/tv_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/state_selection"
+        android:enabled="true"
+        android:gravity="center_horizontal"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="Continue"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp" />
+
+</RelativeLayout>

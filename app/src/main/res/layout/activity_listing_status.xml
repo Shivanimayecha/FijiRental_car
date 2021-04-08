@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListingStatus">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_color">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:src="@drawable/ic_back"
+             />
+
+        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_toRightOf="@+id/iv_back"
+            android:gravity="center_vertical"
+            android:text="@string/listing_status"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/status_group"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp">
+            <com.app.fijirentalcars.CustomViews.CustomRadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/green"
+                android:text="@string/listed"
+                android:tag="LISTED"
+                android:id="@+id/listed"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"/>
+            <com.app.fijirentalcars.CustomViews.CustomRadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/green"
+                android:text="@string/snoozed"
+                android:textAlignment="textStart"
+                android:tag="SNOOZED"
+                android:id="@+id/snoozed"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:textSize="@dimen/_14sdp"/>
+
+            <com.app.fijirentalcars.CustomViews.CustomRadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/green"
+                android:text="@string/unlisted"
+                android:tag="UNLISTED"
+                android:id="@+id/unlisted"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:orientation="vertical">
+            <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Delete listing"
+                android:gravity="center"
+                android:id="@+id/delete_listing"
+                android:textColor="@color/red"
+                android:textSize="@dimen/_12sdp"
+                android:padding="@dimen/_5sdp"/>
+            <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="@color/black3"
+                android:text="Deleting your listing will permanently remove it from Turo."
+                android:textSize="@dimen/_10sdp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

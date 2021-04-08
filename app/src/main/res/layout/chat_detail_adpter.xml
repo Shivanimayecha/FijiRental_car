@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/_5sdp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/msg_bubble_left"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/_20sdp"
+                        android:paddingTop="@dimen/_20sdp"
+                        android:paddingRight="@dimen/_20sdp"
+                        android:paddingBottom="@dimen/_20sdp"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula sem a malesuada rhoncus."
+                        android:textColor="@color/black2"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_15sdp"
+                        android:gravity="right"
+                        android:text="Apr 18, 12:50 pm"
+                        android:textColor="#B5B5B5"
+                        android:textSize="@dimen/_14sdp" />
+
+                </LinearLayout>
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:src="@drawable/profile_img" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:src="@drawable/profile_img" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/msg_bubble_right"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/_20sdp"
+                        android:paddingTop="@dimen/_20sdp"
+                        android:paddingRight="@dimen/_20sdp"
+                        android:paddingBottom="@dimen/_20sdp"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula sem a malesuada rhoncus."
+                        android:textColor="@color/black2"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="left"
+                        android:text="Apr 18, 12:50 pm"
+                        android:textColor="#B5B5B5"
+                        android:textSize="@dimen/_14sdp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

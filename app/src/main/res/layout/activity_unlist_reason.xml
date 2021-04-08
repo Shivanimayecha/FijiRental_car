@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListingStatus">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStart="0dp"
+        android:background="@color/toolbar_color">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/_10sdp"
+                android:src="@drawable/ic_back"
+                 />
+
+            <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_toRightOf="@+id/iv_back"
+                android:gravity="center"
+                android:text="Unlist"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp" />
+
+            <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Regular
+                android:id="@+id/save_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/_10sdp"
+                android:text="next"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                app:textAllCaps="true" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+            android:id="@+id/sub_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Select a reason for unlisting your car"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <RadioGroup
+            android:id="@+id/status_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sub_head"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <com.app.fijirentalcars.CustomViews.CustomRadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/green"
+                android:text="Pause my listing temporarily"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.app.fijirentalcars.CustomViews.CustomRadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/green"
+                android:text="I no longer have this car"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.app.fijirentalcars.CustomViews.CustomRadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/green"
+                android:text="Insurance, trust or safety concerns"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.app.fijirentalcars.CustomViews.CustomRadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/green"
+                android:text="I’m not earning enough"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.app.fijirentalcars.CustomViews.CustomRadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/green"
+                android:text="I feel Turo requires too much work"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.app.fijirentalcars.CustomViews.CustomRadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/green"
+                android:text="I’ve had a negative experience"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.app.fijirentalcars.CustomViews.CustomRadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/green"
+                android:text="I have other reasons"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+        </RadioGroup>
+
+        <com.app.fijirentalcars.CustomViews.CustomEditText_Poppins_SemiBold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/status_group"
+            android:layout_marginStart="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black4"
+            android:id="@+id/unlist_reason"
+            android:visibility="gone"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

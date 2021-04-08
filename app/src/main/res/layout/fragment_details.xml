@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F6F9">
+
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_40sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="@dimen/_40sdp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_white"
+                        android:paddingVertical="@dimen/_20sdp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:paddingHorizontal="@dimen/_30sdp">
+
+
+
+
+                        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                            android:id="@+id/tv_triptime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_below="@+id/tv_tripstart"
+                            android:text="Thu, 30 Apr"
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_10sdp"/>
+
+                        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_below="@+id/tv_tripstart"
+                            android:text="Sun, 3 May"
+                            android:layout_alignParentRight="true"
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_10sdp"/>
+
+
+                        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_below="@+id/tv_tripstart"
+                            android:text="To"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_10sdp"/>
+
+                        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_below="@+id/tv_triptime"
+                            android:text="10:00 AM"
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_10sdp"/>
+
+                        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_below="@+id/tv_triptime"
+                            android:layout_alignParentRight="true"
+                            android:text="10:00 AM"
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_10sdp"/>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_white"
+                        android:paddingVertical="@dimen/_20sdp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:paddingHorizontal="@dimen/_30sdp">
+
+                        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                            android:id="@+id/tv_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_12sdp"
+                            android:textColor="@color/black2"
+                            android:text="FIJI GO"
+                            android:layout_centerHorizontal="true"
+                            />
+
+                        <LinearLayout
+                            android:id="@+id/ll_lock"
+                            android:elevation="1dp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_below="@+id/tv_title"
+                            android:background="@drawable/rouded_circle_white"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_margin="@dimen/_10sdp"
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:src="@drawable/ic_action_lock"/>
+                        </LinearLayout>
+
+                        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                            android:id="@+id/tv_lock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_12sdp"
+                            android:textColor="@color/black2"
+                            android:text="LOCK"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_below="@+id/ll_unlock"
+                            />
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_unlock"
+                            android:layout_alignParentRight="true"
+                            android:elevation="1dp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_below="@+id/tv_title"
+                            android:background="@drawable/rouded_circle_white"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_margin="@dimen/_10sdp"
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:src="@drawable/ic_action_unlock"/>
+                        </LinearLayout>
+
+
+                        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                            android:id="@+id/tv_unlock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_12sdp"
+                            android:textColor="@color/black2"
+                            android:text="UNLOCK"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/ll_unlock"
+                            android:layout_centerHorizontal="true"
+                            />
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_15sdp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:background="@drawable/round_white">
+
+
+                        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                            android:id="@+id/tv_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_12sdp"
+                            android:textColor="@color/black2"
+                            android:text="NEAR THIS LOCATION"
+                            />
+
+
+                        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                            android:layout_below="@+id/tv_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:textColor="@color/black2"
+                            android:text="Union station, Los angeles, CA"
+                            />
+
+                       <ImageView
+                           android:layout_width="@dimen/_30sdp"
+                           android:layout_height="@dimen/_30sdp"
+                           android:src="@drawable/ic_action_car_with_rounded"
+                           android:layout_centerVertical="true"
+                           android:layout_alignParentRight="true"/>
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_15sdp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:background="@drawable/round_white">
+
+
+                        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                            android:id="@+id/tv_find"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_12sdp"
+                            android:textColor="@color/black2"
+                            android:textAllCaps="true"
+                            android:text="Pickup &amp; return instructions "
+                            />
+
+
+                        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                            android:layout_below="@+id/tv_find"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:textColor="@color/black2"
+                            android:text="We are open to offer you the best prices in town for rent a car! sed do eiumod tempor incididunt labore et dolore."
+                            />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_15sdp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:background="@drawable/round_white">
+
+
+                        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                            android:id="@+id/tv_pickup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_12sdp"
+                            android:textColor="@color/black2"
+                            android:textAllCaps="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="FIND &amp; Unlock"
+                            />
+
+
+                        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                            android:layout_below="@+id/tv_pickup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:textColor="@color/black3"
+                            android:layout_centerHorizontal="true"
+                            android:letterSpacing="0.02"
+                            android:text="Lorem ipsum dolor sit amet on the coctetur adipiscing elit the sed do eiusmod tempor Lorem ipsum dolor sit amet on the coctetur"
+
+                            />
+
+
+                    </RelativeLayout>
+
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+            android:id="@+id/tv_getstarted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14sdp"
+            android:layout_alignParentBottom="true"
+            android:paddingVertical="@dimen/_10sdp"
+            android:textColor="@color/white"
+            android:letterSpacing="0.02"
+            android:text="Get Stated"
+            android:textAllCaps="true"
+            android:background="@color/green"
+            android:gravity="center_horizontal"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="@dimen/_30sdp"/>
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

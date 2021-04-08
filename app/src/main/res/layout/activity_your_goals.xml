@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".YourGoals">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:src="@drawable/ic_back"
+            app:tint="@color/black" />
+
+        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_toRightOf="@+id/iv_back"
+            android:gravity="center_vertical"
+            android:text="@string/your_goals"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tv_continue"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_10sdp">
+
+            <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/earning_goal"
+                android:paddingRight="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sdp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/black3" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:id="@+id/share_group"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_8sdp">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:layoutDirection="rtl"
+                    android:text="@string/cover_payment"
+                    android:tag="COVER_CAR_PAYMENT"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"/>
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:layoutDirection="rtl"
+                    android:text="@string/generate_side"
+                    android:tag="GENERATE_SIDE_INCOME"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"/>
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:layoutDirection="rtl"
+                    android:text="@string/expand_business"
+                    android:tag="EXPANDING_EXISTING_BUSINESS"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"/>
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:layoutDirection="rtl"
+                    android:text="@string/build_source"
+                    android:textAlignment="textStart"
+                    android:tag="BUILD_PRIMARY_INCOME"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"/>
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:layoutDirection="rtl"
+                    android:text="@string/not_sure"
+                    android:tag="NOT_SURE_YET"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"/>
+
+            </RadioGroup>
+
+
+            <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/how_often_user_car"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sdp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/black3" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:id="@+id/week_group"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_8sdp">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:layoutDirection="rtl"
+                    android:text="@string/never"
+                    android:tag="NEVER_OWNER"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"/>
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:layoutDirection="rtl"
+                    android:tag="RARELY_OWNER"
+                    android:text="@string/rarely_once"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"/>
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:layoutDirection="rtl"
+                    android:text="@string/sometime_week"
+                    android:tag="SOMETIMES_OWNER"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"/>
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:layoutDirection="rtl"
+                    android:tag="OFTEN_OWNER"
+                    android:text="@string/often_week"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"/>
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:layoutDirection="rtl"
+                    android:text="@string/always_week"
+                    android:textAlignment="textStart"
+                    android:tag="ALWAYS_OWNER"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"/>
+
+            </RadioGroup>
+
+            <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/often_share"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sdp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/black3" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:id="@+id/month_group"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_8sdp">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:layoutDirection="rtl"
+                    android:text="@string/not_sure_curios"
+                    android:tag="NEVER_RENTER_PREFERENCE"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"/>
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:layoutDirection="rtl"
+                    android:tag="RARELY_RENTER_PREFERENCE"
+                    android:text="@string/rarely_month"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"/>
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:layoutDirection="rtl"
+                    android:tag="SOMETIMES_RENTER_PREFERENCE"
+                    android:text="@string/sometime_month"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"/>
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:layoutDirection="rtl"
+                    android:text="@string/often_month"
+                    android:tag="OFTEN_RENTER_PREFERENCE"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"/>
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:layoutDirection="rtl"
+                    android:tag="ALWAYS_RENTER_PREFERENCE"
+                    android:text="@string/always_month"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"/>
+
+            </RadioGroup>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+        android:id="@+id/tv_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/state_selection"
+        android:gravity="center_horizontal"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="Continue"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp" />
+
+</RelativeLayout>

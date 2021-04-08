@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F9F9FC"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                android:id="@+id/tv_door"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:text="Driver Side Door"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:textColor="@color/black2"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/_12sdp"/>
+
+            <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Regular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:text="Lorem ipsum dolor sit amet,consectetur in the scing elit, sed do eiusmood tempore on does incididunt ut labore ealiqua. Lorem ipsum is the dolor sit amet consecutetur."
+                android:gravity="center_vertical"
+                android:letterSpacing="0.02"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:textSize="@dimen/_10sdp"/>
+
+        </LinearLayout>
+
+        <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+            android:id="@+id/tv_number"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:textColor="@color/green"
+            android:textSize="@dimen/_18sdp"
+            android:text="1"
+            android:elevation="1dp"
+
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:background="@drawable/rouded_circle_white"/>
+
+
+
+
+
+    </FrameLayout>
+
+
+
+
+
+
+</LinearLayout>

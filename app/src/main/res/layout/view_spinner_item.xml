@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:letterSpacing="0.02"
+    android:id="@android:id/text1"
+    style="?android:attr/spinnerItemStyle"
+    android:text="hi"
+    android:padding="@dimen/_3sdp"
+    android:textColor="@color/black2"
+    android:textSize="@dimen/_12sdp"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

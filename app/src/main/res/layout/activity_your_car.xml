@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".YourCarActivity"
+    android:background="#F9F9FC">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/ic_action_back_black"
+            android:layout_margin="@dimen/_10sdp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_40sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:orientation="vertical">
+
+
+                    <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/iv_back"
+                        android:layout_margin="@dimen/_15sdp"
+                        android:text="Your Car"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/_13sdp"/>
+
+
+                    <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Regular
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:text="Lorem ipsum dolor sit amet,consectetur in the scing elit, sed do eiusmood tempore on does incididunt ut labore ealiqua. Lorem ipsum is the dolor sit amet consecutetur."
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/_10sdp"/>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/recyclerview"/>
+
+
+
+
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+            <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_Bold
+                android:id="@+id/tv_clocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_14sdp"
+                android:layout_alignParentBottom="true"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:text="Confirm Location"
+                android:textAllCaps="true"
+                android:background="@color/green"
+                android:gravity="center_horizontal"
+                android:layout_gravity="bottom"
+                android:letterSpacing="0.02"
+                android:layout_marginTop="@dimen/_30sdp"/>
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>

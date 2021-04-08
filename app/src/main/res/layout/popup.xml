@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+   <!-- <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="-270dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/postOdometerTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/helveticabold"
+        android:text="Enter Event"
+        android:textColor="#000"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <com.app.fijirentalcars.CustomViews.CustomEditText_Poppins_SemiBold
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:hint="Enter Price"
+        android:inputType="numberDecimal"
+        android:layout_margin="@dimen/_5sdp"
+        android:maxLines="1"
+        android:fontFamily="@font/helveticaregular"
+        android:textColor="#000"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:background="@drawable/bg_chat_edittext"
+       />
+
+    <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+        android:id="@+id/okTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ok"
+        android:layout_below="@id/editText"
+        android:textSize="16sp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="20dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@id/editText"
+        />
+
+    <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+        android:id="@+id/cancelTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_below="@id/editText"
+
+        android:text="Cancel"
+        android:layout_toRightOf="@id/okTv"
+        android:textSize="16sp"
+        />
+
+    <!--app:layout_constraintEnd_toStartOf="@+id/okTv"
+    app:layout_constraintTop_toTopOf="@id/okTv"
+-->
+</RelativeLayout>
