@@ -147,7 +147,6 @@ public class CarListActivity extends AppCompatActivity implements View.OnClickLi
     private String endTime = "10:00 AM";
     private int DATE_PICKER = 502;
 
-
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
