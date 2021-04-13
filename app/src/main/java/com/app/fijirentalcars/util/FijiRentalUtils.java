@@ -64,8 +64,10 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -125,7 +127,7 @@ public class FijiRentalUtils {
     public static String carModel = "CarModelDetails";
     public static String Consumer = "subscriber";
     public static String Owner = "fleet_management_partner";
-    public static String User_Selection="USER_SELECTION";
+    public static String User_Selection = "USER_SELECTION";
 
 
     public static boolean emailValidator(String email) {
@@ -422,6 +424,123 @@ public class FijiRentalUtils {
         Paper.book().write(FijiRentalUtils.carModel, carModel);
     }
 
+    public static int getCountOfDays(String createdDateString, String expireDateString, String pattern) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat(pattern, Locale.getDefault());//"dd/MM/yyyy"
+
+        Date createdConvertedDate = null, expireCovertedDate = null, todayWithZeroTime = null;
+        try {
+            createdConvertedDate = dateFormat.parse(createdDateString);
+            expireCovertedDate = dateFormat.parse(expireDateString);
+
+            Date today = new Date();
+
+            todayWithZeroTime = dateFormat.parse(dateFormat.format(today));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        int cYear = 0, cMonth = 0, cDay = 0;
+
+        if (createdConvertedDate.after(todayWithZeroTime)) {
+            Calendar cCal = Calendar.getInstance();
+            cCal.setTime(createdConvertedDate);
+            cYear = cCal.get(Calendar.YEAR);
+            cMonth = cCal.get(Calendar.MONTH);
+            cDay = cCal.get(Calendar.DAY_OF_MONTH);
+
+        } else {
+            Calendar cCal = Calendar.getInstance();
+            cCal.setTime(todayWithZeroTime);
+            cYear = cCal.get(Calendar.YEAR);
+            cMonth = cCal.get(Calendar.MONTH);
+            cDay = cCal.get(Calendar.DAY_OF_MONTH);
+        }
+
+
+    /*Calendar todayCal = Calendar.getInstance();
+    int todayYear = todayCal.get(Calendar.YEAR);
+    int today = todayCal.get(Calendar.MONTH);
+    int todayDay = todayCal.get(Calendar.DAY_OF_MONTH);
+    */
+
+        Calendar eCal = Calendar.getInstance();
+        eCal.setTime(expireCovertedDate);
+
+        int eYear = eCal.get(Calendar.YEAR);
+        int eMonth = eCal.get(Calendar.MONTH);
+        int eDay = eCal.get(Calendar.DAY_OF_MONTH);
+
+        Calendar date1 = Calendar.getInstance();
+        Calendar date2 = Calendar.getInstance();
+
+        date1.clear();
+        date1.set(cYear, cMonth, cDay);
+        date2.clear();
+        date2.set(eYear, eMonth, eDay);
+
+        long diff = date2.getTimeInMillis() - date1.getTimeInMillis();
+
+        float dayCount = (float) diff / (24 * 60 * 60 * 1000);
+
+        //return ("" + (int) dayCount);
+        return (int) dayCount;
+    }
+
+
+    public static String parseDateTodayddMM1(String time, String inputPattern, String outputPattern) {
+//        String inputPattern = "yyyy-MM-dd HH:mm aa";
+//        String outputPattern = "EEE, dd MMM - HH:mm aa";  //Thu,30 Apr - 10:00 AM
+        SimpleDateFormat inputFormat = new SimpleDateFormat(inputPattern);
+        SimpleDateFormat outputFormat = new SimpleDateFormat(outputPattern);
+
+        Date date = null;
+        String str = null;
+
+        try {
+            date = inputFormat.parse(time);
+            str = outputFormat.format(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return str;
+    }
+
+    public static String parseDateTodayddMM(String time) {
+        String inputPattern = "yyyy-MM-dd HH:mm:ss";
+        String outputPattern = "EEE, dd MMM - HH:mm aa";  //Thu,30 Apr - 10:00 AM
+        SimpleDateFormat inputFormat = new SimpleDateFormat(inputPattern);
+        SimpleDateFormat outputFormat = new SimpleDateFormat(outputPattern);
+
+        Date date = null;
+        String str = null;
+
+        try {
+            date = inputFormat.parse(time);
+            str = outputFormat.format(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return str;
+    }
+
+    public static String parseDateToddMMyyyy(String time) {
+        String inputPattern = "yyyy-MM-dd HH:mm:ss";
+        String outputPattern = "yyyy-MM-dd";
+        SimpleDateFormat inputFormat = new SimpleDateFormat(inputPattern);
+        SimpleDateFormat outputFormat = new SimpleDateFormat(outputPattern);
+
+        Date date = null;
+        String str = null;
+
+        try {
+            date = inputFormat.parse(time);
+            str = outputFormat.format(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return str;
+    }
+
     public static String chagneDateFormate(LocalDate startdate, String startTime) {
 
         String time = "";
@@ -453,11 +572,13 @@ public class FijiRentalUtils {
         }
         return ageList;
     }
-    public static void setCustomTypeFace(View textView,Context context) {
-        if(textView instanceof TextInputEditText){
-            ((EditText)textView).setTypeface(FijiRentalUtils.getSemiBoldTypeFace(context));
-        } if(textView instanceof AutoCompleteTextView){
-            ((AutoCompleteTextView)textView).setTypeface(FijiRentalUtils.getSemiBoldTypeFace(context));
+
+    public static void setCustomTypeFace(View textView, Context context) {
+        if (textView instanceof TextInputEditText) {
+            ((EditText) textView).setTypeface(FijiRentalUtils.getSemiBoldTypeFace(context));
+        }
+        if (textView instanceof AutoCompleteTextView) {
+            ((AutoCompleteTextView) textView).setTypeface(FijiRentalUtils.getSemiBoldTypeFace(context));
         }
 
         ((TextInputLayout) textView.getParent().getParent()).setTypeface(FijiRentalUtils.getSemiBoldTypeFace(context));
@@ -896,22 +1017,21 @@ public class FijiRentalUtils {
     }
 
 
-    public static String parseDate(String val){
+    public static String parseDate(String val) {
 
-            String datetime=null;
-            DateFormat inputFormat = new SimpleDateFormat("yyyy/MM/dd");
-            SimpleDateFormat d= new SimpleDateFormat("yyyy-MM-dd");
-            try {
-                Date convertedDate = inputFormat.parse(val);
-                datetime = d.format(convertedDate);
+        String datetime = null;
+        DateFormat inputFormat = new SimpleDateFormat("yyyy/MM/dd");
+        SimpleDateFormat d = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            Date convertedDate = inputFormat.parse(val);
+            datetime = d.format(convertedDate);
 
-            }catch (ParseException e)
-            {
-
-            }
-            return  datetime;
-
+        } catch (ParseException e) {
 
         }
+        return datetime;
+
+
+    }
 
 }

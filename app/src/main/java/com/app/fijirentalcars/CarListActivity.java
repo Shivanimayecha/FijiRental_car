@@ -364,7 +364,7 @@ public class CarListActivity extends AppCompatActivity implements View.OnClickLi
 
             @Override
             public boolean isLastPage() {
-                return (TOTAL_PAGES==currentPage);
+                return (TOTAL_PAGES == currentPage);
             }
 
             @Override
@@ -379,7 +379,7 @@ public class CarListActivity extends AppCompatActivity implements View.OnClickLi
 
         if (FijiRentalUtils.isNetworkAvailable(CarListActivity.this)) {
             isLoading = true;
-            currentPage=1;
+            currentPage = 1;
             getcarlist();
             getMakeList();
         }
@@ -561,6 +561,8 @@ public class CarListActivity extends AppCompatActivity implements View.OnClickLi
                 dateSelection.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        Log.e("TAG", "STARTDATE:-- " + Startdate.toString());
+                        Log.e("TAG", "ENDDATE:-- " + EndDate.toString());
                         Intent dateSelection = new Intent(CarListActivity.this, RouteDatePicker.class);
                         dateSelection.putExtra("STARTDATE", Startdate.toString());
                         dateSelection.putExtra("ENDDATE", EndDate.toString());
@@ -852,9 +854,8 @@ public class CarListActivity extends AppCompatActivity implements View.OnClickLi
 
         }
         data.put("page", String.valueOf(currentPage));
-        data.put("to", FijiRentalUtils.chagneDateFormate(Startdate,startTime));
-        data.put("from", FijiRentalUtils.chagneDateFormate(EndDate,endTime));
-
+        data.put("to", FijiRentalUtils.chagneDateFormate(Startdate, startTime));
+        data.put("from", FijiRentalUtils.chagneDateFormate(EndDate, endTime));
 
 
         Call<ResponseBody> call = apiService.getcarslists(FijiRentalUtils.getAccessToken(CarListActivity.this),
@@ -866,7 +867,7 @@ public class CarListActivity extends AppCompatActivity implements View.OnClickLi
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 String message = "";
                 progressDialog.dismiss();
-                isLoading=false;
+                isLoading = false;
 
 
                 try {

@@ -98,9 +98,11 @@ public class RouteDatePicker extends AppCompatActivity {
                 FijiRentalUtils.Logger("TAGS", "fat " + selectedDate.getFirst());
                 FijiRentalUtils.Logger("TAGS", "fat 2 " + selectedDate.getSecond());
 
-                if(selectedDate.getSecond()==null){
-                    FijiRentalUtils.ShowValidation("Select return Date",RouteDatePicker.this,null);
-                }else {
+                if (selectedDate.getSecond() == null) {
+                    FijiRentalUtils.ShowValidation("Select return Date", RouteDatePicker.this, null);
+                } else if (endTimeView.getText().toString().equalsIgnoreCase("")) {
+                    FijiRentalUtils.ShowValidation("Select end time", RouteDatePicker.this, null);
+                } else {
                     Intent returnIntent = new Intent();
                     returnIntent.putExtra("start_date", LocalDate.fromDateFields(selectedDate.getFirst()).toString());
                     returnIntent.putExtra("end_date", LocalDate.fromDateFields(selectedDate.getSecond()).toString());
@@ -109,14 +111,11 @@ public class RouteDatePicker extends AppCompatActivity {
                     setResult(Activity.RESULT_OK, returnIntent);
                     finish();
                 }
-
-
             }
         });
 
         startTimeBar.setMax(24 * 4);
         endTimeBar.setMax(24 * 4);
-
 
 
         startTimeBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -129,7 +128,7 @@ public class RouteDatePicker extends AppCompatActivity {
                 SimpleDateFormat _24HourSDF = new SimpleDateFormat("HH:mm");
                 SimpleDateFormat _12HourSDF = new SimpleDateFormat("hh:mm a");
                 try {
-                    Date _24HourDt = _24HourSDF.parse(hours+":"+minutes);
+                    Date _24HourDt = _24HourSDF.parse(hours + ":" + minutes);
                     startTimeview.setText(_12HourSDF.format(_24HourDt));
                 } catch (ParseException e) {
                     e.printStackTrace();
@@ -156,7 +155,7 @@ public class RouteDatePicker extends AppCompatActivity {
                 SimpleDateFormat _24HourSDF = new SimpleDateFormat("HH:mm");
                 SimpleDateFormat _12HourSDF = new SimpleDateFormat("hh:mm a");
                 try {
-                    Date _24HourDt = _24HourSDF.parse(hours+":"+minutes);
+                    Date _24HourDt = _24HourSDF.parse(hours + ":" + minutes);
                     endTimeView.setText(_12HourSDF.format(_24HourDt));
                 } catch (ParseException e) {
                     e.printStackTrace();

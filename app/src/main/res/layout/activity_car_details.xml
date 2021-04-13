@@ -416,12 +416,14 @@
                 </RelativeLayout>
 
                 <View
+                    android:id="@+id/v_tripsaving"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_5sdp"
                     android:background="@color/bg" />
 
 
                 <LinearLayout
+                    android:id="@+id/ll_tripSaving"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -476,6 +478,7 @@
                                     android:orientation="vertical">
 
                                     <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                                        android:id="@+id/tv_dayExtra"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="@dimen/_10sdp"
@@ -485,6 +488,7 @@
                                         android:textSize="@dimen/_10sdp" />
 
                                     <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                                        android:id="@+id/tv_percntg"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="@dimen/_10sdp"
@@ -498,6 +502,7 @@
                                 </LinearLayout>
 
                                 <com.app.fijirentalcars.CustomViews.CustomTextView_Poppins_SemiBold
+                                    android:id="@+id/tv_totalSavePrice"
                                     android:layout_width="match_parent"
                                     android:layout_height="@dimen/_30sdp"
                                     android:layout_alignParentRight="true"

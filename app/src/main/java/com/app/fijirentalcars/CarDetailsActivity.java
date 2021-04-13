@@ -1,5 +1,6 @@
 package com.app.fijirentalcars;
 
+import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.browser.customtabs.CustomTabsIntent;
@@ -37,6 +38,7 @@ import com.app.fijirentalcars.util.FijiRentalUtils;
 import com.bumptech.glide.Glide;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
+import org.joda.time.LocalDate;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -55,8 +57,9 @@ import retrofit2.Response;
 
 public class CarDetailsActivity extends AppCompatActivity implements View.OnClickListener {
 
-    TextView tv_next, dateChange, modelName, modelYear, modelPrice, modelRating, carImages, unlimitedDistance, limitedDistance, carDoor, carSeat, carFuel, carDescription, hostName, hostJoine, carMpg;
-    LinearLayout tripReview, carMpgLayout;
+    TextView tv_dayExtra, tv_percntg, tv_totalSavePrice, tv_startDate, tv_endDate, tv_next, dateChange, modelCarLocation, modelName, modelYear, modelPrice, modelRating, carImages, unlimitedDistance, limitedDistance, carDoor, carSeat, carFuel, carDescription, hostName, hostJoine, carMpg;
+    LinearLayout tripReview, carMpgLayout, ll_tripSaving;
+    View v_tripsaving;
     ImageView iv_back, iv_fav, carFuelIcon;
     CircleImageView userProfile;
     ViewPager viewPager;
@@ -68,6 +71,10 @@ public class CarDetailsActivity extends AppCompatActivity implements View.OnClic
     ProgressDialog progressDialog;
     LinearLayout insuranceView;
     CarModel carModel;
+    private int DATE_PICKER = 502;
+    LocalDate Startdate, EndDate;
+    String startTime, endTime, _3dayDis = "", _7dayDis = "", _30dayDis = "";
+    double price = 00.00;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -91,6 +98,8 @@ public class CarDetailsActivity extends AppCompatActivity implements View.OnClic
         progressDialog.setMessage(getResources().getString(R.string.loading));
         progressDialog.setCancelable(false);
 
+
+        // Log.e("TAG", "dateDiff " + FijiRentalUtils.getCountOfDays("09/04/2021", "12/04/2021"));
         init();
         getIntentData();
 
@@ -354,6 +363,14 @@ public class CarDetailsActivity extends AppCompatActivity implements View.OnClic
 
         updateView(carModel);
 
+       /* String sdate = FijiRentalUtils.parseDateTodayddMM1(carModel.getPickupDate(), "yyyy-MM-dd HH:mm:ss", "EEE, dd MMM");
+        String edate = FijiRentalUtils.parseDateTodayddMM1(carModel.getReturnDate(), "yyyy-MM-dd HH:mm:ss", "EEE, dd MMM");
+        Log.e("TAG", "sdate--edate" + sdate + "--" + edate);
+
+        price = Double.parseDouble(carModel.getPrice());
+        Log.e("TAG", "price " + price);
+
+        tripSavingCalculation(sdate, edate);*/
     }
 
     @Override
@@ -366,10 +383,31 @@ public class CarDetailsActivity extends AppCompatActivity implements View.OnClic
 
         modelName.setText(carModel.getItemName());
         modelYear.setText(carModel.getModelYear());
+        modelCarLocation.setText(carModel.getModelCarLocation());
+
+        tv_startDate.setText(FijiRentalUtils.parseDateTodayddMM1(carModel.getPickupDate(), "yyyy-MM-dd HH:mm:ss", "EEE, dd MMM - HH:mm aa"));
+        tv_endDate.setText(FijiRentalUtils.parseDateTodayddMM1(carModel.getReturnDate(), "yyyy-MM-dd HH:mm:ss", "EEE, dd MMM - HH:mm aa"));
+
         modelRating.setText(String.valueOf(carModel.getRatingModel().getAvg_rating()));
         if (!TextUtils.isEmpty(carModel.getPrice()) && !carModel.getPrice().equalsIgnoreCase("null")) {
             modelPrice.setText(String.valueOf((int) Double.parseDouble(carModel.getPrice())));
+            price = Double.parseDouble(carModel.getPrice());
+            Log.e("TAG", "price " + price);
         }
+
+        _3dayDis = carModel.get3extraDayDiscount();
+        _7dayDis = carModel.get7extraDayDiscount();
+        _30dayDis = carModel.get30extraDayDiscount();
+        //tripSavingCalculation("Fri, 09 Apr", "Mon, 12 Apr", price, carModel.get3extraDayDiscount());
+        String sdate = FijiRentalUtils.parseDateTodayddMM1(carModel.getPickupDate(), "yyyy-MM-dd HH:mm:ss", "EEE, dd MMM");
+        String edate = FijiRentalUtils.parseDateTodayddMM1(carModel.getReturnDate(), "yyyy-MM-dd HH:mm:ss", "EEE, dd MMM");
+        Log.e("TAG", "sdate--edate" + sdate + "--" + edate);
+
+//        price = Double.parseDouble(carModel.getPrice());
+//        Log.e("TAG", "price " + price);
+
+        tripSavingCalculation(sdate, edate);
+
         imagePager.notifyDataSetChanged();
 
         if (carModel.getIs_favourites().equals("0")) {
@@ -448,6 +486,85 @@ public class CarDetailsActivity extends AppCompatActivity implements View.OnClic
 
     }
 
+    private void tripSavingCalculation(String sdate, String edate) { // double price, String extraDayDiscount
+
+        int daycount = FijiRentalUtils.getCountOfDays(sdate, edate, "EEE, dd MMM");
+
+        Log.e("TAG", "daycount" + daycount);
+        try {
+            if (daycount < 3) {
+                ll_tripSaving.setVisibility(View.GONE);
+                v_tripsaving.setVisibility(View.GONE);
+            } else {
+                ll_tripSaving.setVisibility(View.VISIBLE);
+                v_tripsaving.setVisibility(View.VISIBLE);
+                double totalprice, discount, percantage;
+                int savePrice;
+                try {
+                    if (daycount >= 3 && daycount < 7) {
+                        totalprice = price * daycount;
+                        discount = Double.parseDouble(_3dayDis);
+                        percantage = (totalprice / 100.0f) * discount;
+                        savePrice = (int) ((totalprice * percantage) / 100);
+                        tv_dayExtra.setText("3+ day discount savings");
+                        tv_percntg.setText("You save " + (int) percantage + " %");
+                        tv_totalSavePrice.setText("$" + savePrice);
+
+                        Log.e("TAG", "3day val " + totalprice + "--" + percantage);
+                    } else if (daycount >= 7 && daycount < 30) {
+                        totalprice = price * daycount;
+                        discount = Double.parseDouble(_7dayDis);
+                        percantage = (totalprice / 100.0f) * discount;
+                        savePrice = (int) ((totalprice * percantage) / 100);
+                        tv_dayExtra.setText("7+ day discount savings");
+                        tv_percntg.setText("You save " + (int) percantage + " %");
+                        tv_totalSavePrice.setText("$" + savePrice);
+
+                        Log.e("TAG", "7day val " + totalprice + "--" + percantage);
+                    } else {
+                        totalprice = price * daycount;
+                        discount = Double.parseDouble(_30dayDis);
+                        percantage = (totalprice / 100.0f) * discount;
+                        savePrice = (int) ((totalprice * percantage) / 100);
+                        tv_dayExtra.setText("30+ day discount savings");
+                        tv_percntg.setText("You save " + (int) percantage + " %");
+                        tv_totalSavePrice.setText("$" + savePrice);
+                        Log.e("TAG", "30day val " + totalprice + "--" + percantage);
+                    }
+                } catch (NumberFormatException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == DATE_PICKER) {
+            if (resultCode == RESULT_OK) {
+                Startdate = LocalDate.parse(data.getStringExtra("start_date"));
+                EndDate = LocalDate.parse(data.getStringExtra("end_date"));
+                startTime = data.getStringExtra("start_date_time");
+                endTime = data.getStringExtra("end_date_time");
+
+                Log.e("TAG", "startdate--enddate--starttime--endtime-- " + Startdate + "--" + EndDate + "--" + startTime + "--" + endTime);
+                tv_startDate.setText(FijiRentalUtils.parseDateTodayddMM1(Startdate.toString(), "yyyy-MM-dd", "EEE, dd MMM") + " - " + startTime);
+                tv_endDate.setText(FijiRentalUtils.parseDateTodayddMM1(EndDate.toString(), "yyyy-MM-dd", "EEE, dd MMM") + " - " + endTime);
+
+                String sdate = FijiRentalUtils.parseDateTodayddMM1(Startdate.toString(), "yyyy-MM-dd", "EEE, dd MMM");
+                String edate = FijiRentalUtils.parseDateTodayddMM1(EndDate.toString(), "yyyy-MM-dd", "EEE, dd MMM");
+
+                tripSavingCalculation(sdate, edate);
+
+            }
+        }
+    }
+
     public void init() {
 
         tv_next = findViewById(R.id.tv_next);
@@ -477,6 +594,14 @@ public class CarDetailsActivity extends AppCompatActivity implements View.OnClic
         carFuelIcon = findViewById(R.id.fuel_icon);
         carMpg = findViewById(R.id.car_mpg);
         dateChange = findViewById(R.id.tv_changeDate);
+        modelCarLocation = findViewById(R.id.tv_deliverylocation2);
+        tv_startDate = findViewById(R.id.tv_startDate);
+        tv_endDate = findViewById(R.id.tv_endDate);
+        ll_tripSaving = findViewById(R.id.ll_tripSaving);
+        v_tripsaving = findViewById(R.id.v_tripsaving);
+        tv_dayExtra = findViewById(R.id.tv_dayExtra);
+        tv_percntg = findViewById(R.id.tv_percntg);
+        tv_totalSavePrice = findViewById(R.id.tv_totalSavePrice);
 
         tripReview.setOnClickListener(this);
         report_listing.setOnClickListener(this);
@@ -533,8 +658,14 @@ public class CarDetailsActivity extends AppCompatActivity implements View.OnClic
                 break;
 
             case R.id.tv_changeDate:
-
+                String sdate = FijiRentalUtils.parseDateToddMMyyyy(carModel.getPickupDate());
+                String edate = FijiRentalUtils.parseDateToddMMyyyy(carModel.getReturnDate());
+                Intent dateSelection = new Intent(CarDetailsActivity.this, RouteDatePicker.class);
+                dateSelection.putExtra("STARTDATE", sdate);
+                dateSelection.putExtra("ENDDATE", edate);
+                startActivityForResult(dateSelection, DATE_PICKER);
                 break;
+
             case R.id.cancel_policy:
                 String url = "https://fijirentalcars.siddhidevelopment.com/help/";
 
@@ -570,5 +701,6 @@ public class CarDetailsActivity extends AppCompatActivity implements View.OnClic
         }
 
     }
+
 
 }
